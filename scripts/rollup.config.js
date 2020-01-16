@@ -4,7 +4,7 @@ import replace from 'rollup-plugin-replace'
 import commonjs from 'rollup-plugin-commonjs'
 import { uglify } from 'rollup-plugin-uglify'
 
-const PACKAGE_NAME = process.env.PACKAGE_NAME
+const PACKAGE_NAME = 'react-swipy'
 const ENTRY_FILE = "./src/Swipeable.js"
 const OUTPUT_DIR = "./dist"
 const EXTERNAL = ['react-spring', 'react']
