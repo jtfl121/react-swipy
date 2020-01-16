@@ -4,7 +4,8 @@ import {
   getDirection,
   getOpacity,
   getOffset,
-  withX,
+  // withX,
+  withY,
   getLimitOffset,
 } from "./helpers";
 
@@ -24,8 +25,8 @@ const DEFAULT_PROPS = {
 };
 
 const INITIAL_STATE = {
-  start: 100,
-  offset: 300,
+  start: 0,
+  offset: 0,
   forced: false,
   swiped: false,
   moving: false,
@@ -51,13 +52,13 @@ export default class Swipeable extends PureComponent {
     window.removeEventListener("mouseup", this.onDragEnd);
   }
 
-  onDragStart = withX(start => {
+  onDragStart = withY(start => {
     if (this.state.swiped) return;
 
     this.setState({start, pristine: false, moving: true});
   });
 
-  onDragMove = withX(end => {
+  onDragMove = withY(end => {
     const {start, swiped, moving} = this.state;
 
     if (swiped || !moving) return;
@@ -149,7 +150,7 @@ export default class Swipeable extends PureComponent {
             <div
               style={{
                 opacity,
-                transform: `translateX(${offset}px) rotate(${offset / 10}deg)`,
+                transform: `translateY(${offset}px)`,
                 height: "100%",
                 width: "100%",
               }}
@@ -162,8 +163,8 @@ export default class Swipeable extends PureComponent {
         </Spring>
         {buttons &&
           buttons({
-            right: () => this.forceSwipe("right"),
-            left: () => this.forceSwipe("left"),
+            up: () => this.forceSwipe("up"),
+            down: () => this.forceSwipe("down"),
           })}
       </Fragment>
     );
