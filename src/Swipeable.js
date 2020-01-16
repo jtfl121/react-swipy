@@ -62,7 +62,7 @@ export default class Swipeable extends PureComponent {
 
     if (swiped || !moving) return;
 
-    this.setState({offset: getOffset(start, end)});
+    this.setState({offset: getOffset(end, start)});
   });
 
   onDragEnd = () => {
