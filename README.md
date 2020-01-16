@@ -1,3 +1,6 @@
+# FORK
+This is a fork of the original to have the cards move up and down vs left right
+
 # React Swipy (`react-swipy`)
 [![Build Status](https://travis-ci.org/goncy/react-swipy.svg?branch=master)](https://travis-ci.org/goncy/react-swipy)
 [![Coverage Status](https://coveralls.io/repos/github/goncy/react-swipy/badge.svg?branch=master)](https://coveralls.io/github/goncy/react-swipy?branch=master)

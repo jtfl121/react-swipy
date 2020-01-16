@@ -17,12 +17,13 @@
   ],
   "scripts": {
     "build": "PACKAGE_NAME=react-swipy rollup --config scripts/rollup.config.js",
+    "prepare": "npm run build",
     "test": "jest",
     "cover": "npm test -- --coverage"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/goncy/react-swipy.git"
+    "url": "git://github.com/jtfl121/react-swipy.git"
   },
   "files": [
     "README.md",
