@@ -1,4 +1,4 @@
-export const getDirection = offset => (offset > 0 ? "down" : "up");
+export const getDirection = offset => (offset > 0 ? "up" : "down");
 export const getOffset = (start, end) => -((start - end) * 0.75);
 export const getEvent = e => (e.touches ? e.touches[0] : e);
 export const withY = fn => e => fn(getEvent(e).pageY);
