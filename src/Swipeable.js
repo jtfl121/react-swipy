@@ -4,7 +4,6 @@ import {
   getDirection,
   getOpacity,
   getOffset,
-  // withX,
   withY,
   getLimitOffset,
 } from "./helpers";
