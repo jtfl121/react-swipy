@@ -19,6 +19,8 @@
     "build": "PACKAGE_NAME=react-swipy rollup --config scripts/rollup.config.js",
     "test": "jest",
     "cover": "npm test -- --coverage"
+    "postinstall": "cd node_modules/react-swipy && npm install && npm run build"
+
   },
   "repository": {
     "type": "git",
