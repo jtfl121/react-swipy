@@ -24,8 +24,8 @@ const DEFAULT_PROPS = {
 };
 
 const INITIAL_STATE = {
-  start: 0,
-  offset: 0,
+  start: 100,
+  offset: 300,
   forced: false,
   swiped: false,
   moving: false,
